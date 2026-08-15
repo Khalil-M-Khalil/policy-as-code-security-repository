@@ -1,0 +1,34 @@
+{
+  "policy_id": "POL-AC-001",
+  "title": "Access Control and Identity Governance Policy",
+  "version": "1.0",
+  "status": "approved",
+  "owner": "Chief Information Security Officer",
+  "approver": "Executive Risk Committee",
+  "review_cadence": "annual",
+  "effective_date": "2026-01-01",
+  "scope": "This policy applies to workforce identities, service identities, privileged accounts, applications, infrastructure, and information assets managed or accessed by the organization.",
+  "principles": [
+    "Access is granted from a documented business need and the minimum privileges required to perform an approved responsibility.",
+    "Identity ownership, authentication strength, and authorization decisions are accountable, traceable, and reviewed over time.",
+    "Privileged access is separately governed with stronger authentication, session accountability, and time-bounded elevation where practical.",
+    "Access is removed or adjusted promptly when employment, role, contract, asset, or business need changes."
+  ],
+  "requirements": [
+    {"id": "REQ-001", "statement": "Every human and service identity must have a unique owner, a documented purpose, and an authoritative source record.", "control_mappings": ["NIST SP 800-53 AC-2", "NIST SP 800-53 IA-4", "ISO/IEC 27001:2022 A.5.16"], "evidence": ["Identity inventory", "Service-account register", "Owner attestation"], "accountable_role": "Identity and Access Management"},
+    {"id": "REQ-002", "statement": "Access requests must be approved by the asset owner or delegated authority before access is provisioned.", "control_mappings": ["NIST SP 800-53 AC-2", "COBIT 2019 APO13"], "evidence": ["Access request ticket", "Approval record", "Provisioning log"], "accountable_role": "System Owner"},
+    {"id": "REQ-003", "statement": "Multi-factor authentication must protect remote, privileged, administrative, and high-impact application access unless a documented exception is approved.", "control_mappings": ["NIST SP 800-53 IA-2", "ISO/IEC 27001:2022 A.5.17"], "evidence": ["Authentication configuration", "MFA coverage report", "Exception record"], "accountable_role": "Identity and Access Management"},
+    {"id": "REQ-004", "statement": "Privileged access must use dedicated administrative identities, be logged, and be reviewed at least quarterly.", "control_mappings": ["NIST SP 800-53 AC-6", "NIST SP 800-53 AU-12", "COBIT 2019 DSS05"], "evidence": ["Privileged account list", "Session or command logs", "Quarterly review sign-off"], "accountable_role": "Platform Security"},
+    {"id": "REQ-005", "statement": "Access must be recertified on a risk-based cadence and removed within the defined service-level target after a triggering event.", "control_mappings": ["NIST SP 800-53 AC-2", "ISO/IEC 27001:2022 A.5.18"], "evidence": ["Recertification report", "Joiner-mover-leaver tickets", "Deprovisioning timestamp"], "accountable_role": "People Operations and IAM"},
+    {"id": "REQ-006", "statement": "Authentication and authorization failures must be monitored, protected from unauthorized modification, and investigated according to incident procedures.", "control_mappings": ["NIST SP 800-53 AC-7", "NIST SP 800-53 AU-6"], "evidence": ["Alert rule", "Log retention configuration", "Investigation record"], "accountable_role": "Security Operations"}
+  ],
+  "exceptions": [
+    {"id": "EXC-AC-001", "required_approver": "CISO and System Owner", "expiry_days": 90, "compensating_control": "Document a compensating review, restrict the account to an approved network path, and record enhanced monitoring."},
+    {"id": "EXC-AC-002", "required_approver": "Risk Committee", "expiry_days": 30, "compensating_control": "Use a time-boxed emergency identity, capture session evidence, and complete a post-event review."}
+  ],
+  "references": [
+    {"framework": "NIST SP 800-53 Rev. 5", "identifier": "AC, IA, AU", "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"},
+    {"framework": "ISO/IEC 27001:2022", "identifier": "A.5.15–A.5.18", "url": "https://www.iso.org/standard/27001"},
+    {"framework": "COBIT 2019", "identifier": "APO13, DSS05", "url": "https://www.isaca.org/resources/cobit"}
+  ]
+}

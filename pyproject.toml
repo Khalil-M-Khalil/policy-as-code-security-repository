@@ -1,0 +1,15 @@
+[project]
+name = "policy-as-code-repository"
+version = "0.1.0"
+description = "Original security policies and automated audit checklists mapped to public NIST, ISO and COBIT references."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.2,<3.0",
+  "jsonschema>=4.23,<5.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

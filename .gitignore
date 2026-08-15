@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+*.log
+.DS_Store
+reports/policy_validation_report.json
+reports/policy_validation_findings.csv

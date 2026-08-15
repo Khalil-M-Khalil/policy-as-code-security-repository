@@ -1,0 +1,13 @@
+{
+  "policy_id": "POL-IR-001",
+  "checklist_version": "1.0",
+  "items": [
+    {"check_id": "IR-CHK-001", "requirement_id": "REQ-001", "test": "Response plan, severity model, roster, and escalation paths are current.", "evidence_expected": "Approved plan and exercise record", "owner": "Security Operations", "frequency": "annual"},
+    {"check_id": "IR-CHK-002", "requirement_id": "REQ-002", "test": "Incident cases include required reporter, time, asset, facts, and triage owner fields.", "evidence_expected": "Case sample", "owner": "Incident Coordinator", "frequency": "quarterly"},
+    {"check_id": "IR-CHK-003", "requirement_id": "REQ-003", "test": "Severity decisions use impact, scope, sensitivity, and notification criteria.", "evidence_expected": "Severity rubric and decision samples", "owner": "Incident Commander", "frequency": "quarterly"},
+    {"check_id": "IR-CHK-004", "requirement_id": "REQ-004", "test": "Material evidence has integrity and custody records.", "evidence_expected": "Evidence register and custody log", "owner": "Digital Forensics Lead", "frequency": "per incident"},
+    {"check_id": "IR-CHK-005", "requirement_id": "REQ-005", "test": "Containment and recovery actions are authorized, timestamped, and validated.", "evidence_expected": "Case timeline, change, recovery validation", "owner": "Incident Commander", "frequency": "per incident"},
+    {"check_id": "IR-CHK-006", "requirement_id": "REQ-006", "test": "Material notification decisions are documented with legal or communications review.", "evidence_expected": "Notification decision and approved message", "owner": "Legal and Communications", "frequency": "per incident"},
+    {"check_id": "IR-CHK-007", "requirement_id": "REQ-007", "test": "Post-incident improvement actions have owners and due dates.", "evidence_expected": "Lessons-learned report and backlog", "owner": "CISO", "frequency": "per material incident"}
+  ]
+}

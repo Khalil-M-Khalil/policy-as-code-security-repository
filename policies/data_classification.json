@@ -1,0 +1,34 @@
+{
+  "policy_id": "POL-DC-001",
+  "title": "Information Classification and Handling Policy",
+  "version": "1.0",
+  "status": "approved",
+  "owner": "Chief Privacy and Information Officer",
+  "approver": "Executive Risk Committee",
+  "review_cadence": "annual",
+  "effective_date": "2026-01-01",
+  "scope": "This policy applies to information created, received, processed, stored, transmitted, or disposed of by the organization regardless of format, system, location, or custodian.",
+  "principles": [
+    "Information is classified according to business impact, confidentiality, integrity, availability, privacy, contractual, and regulatory considerations.",
+    "The information owner is accountable for classification, handling requirements, access decisions, and periodic review.",
+    "Handling controls must be proportionate to the sensitivity and lifecycle risk of the information.",
+    "Information is retained only for a documented purpose and securely disposed of when the approved retention period ends."
+  ],
+  "requirements": [
+    {"id": "REQ-001", "statement": "Every material information asset must have an accountable owner and an assigned classification before production use.", "control_mappings": ["NIST SP 800-53 RA-2", "ISO/IEC 27001:2022 A.5.12"], "evidence": ["Information asset register", "Owner record", "Classification field"], "accountable_role": "Information Owner"},
+    {"id": "REQ-002", "statement": "The organization must use the levels Public, Internal, Confidential, and Restricted with documented criteria for each level.", "control_mappings": ["ISO/IEC 27001:2022 A.5.12", "COBIT 2019 APO14"], "evidence": ["Classification standard", "Completed assessment", "Training record"], "accountable_role": "Information Governance"},
+    {"id": "REQ-003", "statement": "Confidential and Restricted information must use approved encryption and access controls during storage and transmission.", "control_mappings": ["NIST SP 800-53 SC-8", "NIST SP 800-53 SC-28", "ISO/IEC 27001:2022 A.8.24"], "evidence": ["Encryption configuration", "Key-management record", "Transfer control"], "accountable_role": "Data Protection"},
+    {"id": "REQ-004", "statement": "Access to Confidential and Restricted information must be limited to approved roles and reviewed by the information owner on a defined cadence.", "control_mappings": ["NIST SP 800-53 AC-6", "ISO/IEC 27001:2022 A.5.15"], "evidence": ["Role matrix", "Access review", "Approval record"], "accountable_role": "Information Owner"},
+    {"id": "REQ-005", "statement": "External sharing of Confidential or Restricted information requires an approved purpose, recipient validation, and contractual or privacy safeguards where applicable.", "control_mappings": ["NIST SP 800-53 AC-20", "ISO/IEC 27001:2022 A.5.14"], "evidence": ["Sharing approval", "Recipient due diligence", "Data processing agreement"], "accountable_role": "Privacy and Legal"},
+    {"id": "REQ-006", "statement": "Retention and secure disposal requirements must be documented for each classification and validated through periodic sampling.", "control_mappings": ["NIST SP 800-53 MP-6", "ISO/IEC 27001:2022 A.8.10", "COBIT 2019 APO14"], "evidence": ["Retention schedule", "Disposal certificate", "Sampling report"], "accountable_role": "Records Management"}
+  ],
+  "exceptions": [
+    {"id": "EXC-DC-001", "required_approver": "Information Owner and Privacy", "expiry_days": 90, "compensating_control": "Limit the dataset, apply additional monitoring, and record the approved purpose and end date."},
+    {"id": "EXC-DC-002", "required_approver": "CISO and Legal", "expiry_days": 30, "compensating_control": "Block external transfer by default and use an approved secure exchange with additional review."}
+  ],
+  "references": [
+    {"framework": "NIST SP 800-53 Rev. 5", "identifier": "AC-6, AC-20, MP-6, RA-2, SC-8, SC-28", "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"},
+    {"framework": "ISO/IEC 27001:2022", "identifier": "A.5.12, A.5.14, A.5.15, A.8.10, A.8.24", "url": "https://www.iso.org/standard/27001"},
+    {"framework": "COBIT 2019", "identifier": "APO14", "url": "https://www.isaca.org/resources/cobit"}
+  ]
+}

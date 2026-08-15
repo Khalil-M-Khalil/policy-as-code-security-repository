@@ -1,0 +1,12 @@
+{
+  "policy_id": "POL-AC-001",
+  "checklist_version": "1.0",
+  "items": [
+    {"check_id": "AC-CHK-001", "requirement_id": "REQ-001", "test": "Identity and service-account inventory has an owner and purpose.", "evidence_expected": "Current export and owner attestation", "owner": "IAM", "frequency": "quarterly"},
+    {"check_id": "AC-CHK-002", "requirement_id": "REQ-002", "test": "Sample access grants have an approved request before provisioning.", "evidence_expected": "Ticket and approval trail", "owner": "System Owner", "frequency": "quarterly"},
+    {"check_id": "AC-CHK-003", "requirement_id": "REQ-003", "test": "MFA coverage includes remote, privileged, and high-impact access.", "evidence_expected": "Coverage report and exceptions", "owner": "IAM", "frequency": "monthly"},
+    {"check_id": "AC-CHK-004", "requirement_id": "REQ-004", "test": "Privileged accounts are dedicated, logged, and reviewed.", "evidence_expected": "Privileged list, logs, review sign-off", "owner": "Platform Security", "frequency": "quarterly"},
+    {"check_id": "AC-CHK-005", "requirement_id": "REQ-005", "test": "Leaver and mover samples meet deprovisioning service levels.", "evidence_expected": "Joiner-mover-leaver sample", "owner": "People Operations and IAM", "frequency": "quarterly"},
+    {"check_id": "AC-CHK-006", "requirement_id": "REQ-006", "test": "Authentication failure alerts are enabled and investigations are traceable.", "evidence_expected": "Alert rule and case sample", "owner": "Security Operations", "frequency": "monthly"}
+  ]
+}

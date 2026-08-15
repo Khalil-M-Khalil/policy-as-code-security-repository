@@ -1,0 +1,35 @@
+{
+  "policy_id": "POL-IR-001",
+  "title": "Cybersecurity Incident Response Policy",
+  "version": "1.0",
+  "status": "approved",
+  "owner": "Head of Security Operations",
+  "approver": "Chief Information Security Officer",
+  "review_cadence": "annual",
+  "effective_date": "2026-01-01",
+  "scope": "This policy applies to suspected or confirmed cybersecurity events affecting organizational systems, information, personnel, customers, suppliers, or services.",
+  "principles": [
+    "The organization prepares for incidents before they occur and maintains clear decision rights for time-sensitive actions.",
+    "Reports are triaged using consistent severity criteria, preserving facts and limiting unnecessary disclosure.",
+    "Containment, eradication, recovery, and communications decisions are documented with accountable owners and timestamps.",
+    "Every material incident produces lessons that improve risk treatment, controls, and response capability."
+  ],
+  "requirements": [
+    {"id": "REQ-001", "statement": "The organization must maintain an incident response plan, contact roster, severity model, and tested escalation paths.", "control_mappings": ["NIST SP 800-61 Rev. 3", "NIST SP 800-53 IR-1", "COBIT 2019 DSS02"], "evidence": ["Approved response plan", "Contact roster", "Exercise record"], "accountable_role": "Security Operations"},
+    {"id": "REQ-002", "statement": "Potential incidents must be recorded in the case system with reporter, time observed, affected asset, initial facts, and assigned triage owner.", "control_mappings": ["NIST SP 800-61 Rev. 3", "NIST SP 800-53 IR-5"], "evidence": ["Incident case", "Triage log", "Asset context"], "accountable_role": "Incident Coordinator"},
+    {"id": "REQ-003", "statement": "Severity must consider business impact, data sensitivity, scope, legal or regulatory exposure, customer impact, and threat confidence.", "control_mappings": ["NIST SP 800-61 Rev. 3", "NIST SP 800-53 IR-4"], "evidence": ["Severity rubric", "Decision record", "Impact assessment"], "accountable_role": "Incident Commander"},
+    {"id": "REQ-004", "statement": "Evidence must be preserved with chain-of-custody details when an incident may require legal, regulatory, employment, or contractual action.", "control_mappings": ["NIST SP 800-53 IR-4", "NIST SP 800-53 AU-10"], "evidence": ["Evidence register", "Hash or integrity record", "Custody log"], "accountable_role": "Digital Forensics Lead"},
+    {"id": "REQ-005", "statement": "Containment and recovery actions must be authorized according to severity, recorded in the case, and validated before closure.", "control_mappings": ["NIST SP 800-61 Rev. 3", "NIST SP 800-53 IR-4", "COBIT 2019 DSS04"], "evidence": ["Action timeline", "Change record", "Recovery validation"], "accountable_role": "Incident Commander"},
+    {"id": "REQ-006", "statement": "Material incidents must trigger documented internal, customer, supplier, legal, or regulatory communications according to approved notification criteria.", "control_mappings": ["NIST SP 800-61 Rev. 3", "NIST SP 800-53 IR-6"], "evidence": ["Communication decision", "Approved message", "Notification timeline"], "accountable_role": "Legal and Communications"},
+    {"id": "REQ-007", "statement": "Post-incident review must identify root contributing factors, control improvements, owners, deadlines, and whether residual risk acceptance is required.", "control_mappings": ["NIST SP 800-61 Rev. 3", "NIST SP 800-53 IR-8", "COBIT 2019 MEA01"], "evidence": ["Lessons-learned report", "Improvement backlog", "Risk decision"], "accountable_role": "CISO"}
+  ],
+  "exceptions": [
+    {"id": "EXC-IR-001", "required_approver": "Incident Commander", "expiry_days": 14, "compensating_control": "Record the emergency decision in the case and schedule a retrospective approval review."},
+    {"id": "EXC-IR-002", "required_approver": "Legal and CISO", "expiry_days": 30, "compensating_control": "Document why a notification criterion could not be met and preserve the decision evidence."}
+  ],
+  "references": [
+    {"framework": "NIST SP 800-61 Rev. 3", "identifier": "Incident response and CSF 2.0 community profile", "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final"},
+    {"framework": "NIST SP 800-53 Rev. 5", "identifier": "IR, AU", "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"},
+    {"framework": "COBIT 2019", "identifier": "DSS02, DSS04, MEA01", "url": "https://www.isaca.org/resources/cobit"}
+  ]
+}

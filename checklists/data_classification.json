@@ -1,0 +1,12 @@
+{
+  "policy_id": "POL-DC-001",
+  "checklist_version": "1.0",
+  "items": [
+    {"check_id": "DC-CHK-001", "requirement_id": "REQ-001", "test": "Sampled information assets have a named owner and classification.", "evidence_expected": "Asset register sample", "owner": "Information Governance", "frequency": "quarterly"},
+    {"check_id": "DC-CHK-002", "requirement_id": "REQ-002", "test": "Classification levels and criteria are communicated and understood.", "evidence_expected": "Standard and training evidence", "owner": "Information Governance", "frequency": "annual"},
+    {"check_id": "DC-CHK-003", "requirement_id": "REQ-003", "test": "Confidential and Restricted storage and transfer paths use approved encryption.", "evidence_expected": "Configuration and key-management evidence", "owner": "Data Protection", "frequency": "quarterly"},
+    {"check_id": "DC-CHK-004", "requirement_id": "REQ-004", "test": "Access reviews for sensitive data are completed by the information owner.", "evidence_expected": "Role matrix and review sign-off", "owner": "Information Owner", "frequency": "quarterly"},
+    {"check_id": "DC-CHK-005", "requirement_id": "REQ-005", "test": "External sharing approvals include purpose, recipient, and safeguards.", "evidence_expected": "Sharing approval and agreement", "owner": "Privacy and Legal", "frequency": "per sharing event"},
+    {"check_id": "DC-CHK-006", "requirement_id": "REQ-006", "test": "Retention samples have a documented period and disposal evidence when due.", "evidence_expected": "Retention schedule and disposal sample", "owner": "Records Management", "frequency": "semiannual"}
+  ]
+}
